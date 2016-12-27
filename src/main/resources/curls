@@ -1,0 +1,56 @@
+curl localhost:8080/api/v1/clubs  {
+    "age":"23",
+    "name":"srinivas",
+    "blog":"http://blog.sodhanalibrary.com",
+    "messages":["msg1","msg2","msg3"] 
+  }
+
+GvHyguiQnfJSujKOXJPvag== (club)
+
+curl -H "Content-Type: application/json" -X POST -d '{"username":"xyz","password":"xyz"}' http://localhost:8080/api/v1/clubs
+
+
+http://localhost:8080/api/v1/clubs
+{
+"name":"CCBA",
+"phone":"4701-5387",
+"contactName":"Bauti",
+"location":"Capital Federal"
+}
+
+http://localhost:8080/api/v1/clubs/1/jobs
+{
+"position":"Entrenador",
+"description":"5ta y 6ta",
+"salary":"5000"
+}
+
+{
+"name":"CCBA",
+"phone":"4701-5387",
+"contactName":"Bauti",
+"location":"Capital Federal"
+}
+
+{
+"username":"admin",
+"email":"bauti44@gmail.com",
+"pass":"admin",
+"active":"true",
+"verified":"true",
+"receiveNotifications":"true",
+"dob":"1985-10-08"
+}
+
+http://localhost:8080/api/v1/clubs?page=0&size=10
+{"id":1,"username":"bauti","pass":"lUx9pSrOQkFjSXvK+1NJcA==","email":"bauti@email.com","profile":{"id":1},"active":true,"receiveNotifications":true,"dob":"1985-10-08","verified":true,"isClub":true}
+
+
+
+
+
+fotos, imagen, perfil social, deporte
+
+pantalla registracion con dos botones grandes
+
+role

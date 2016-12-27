@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title th:text="${title}">Title</title>
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"
+	href="../../css/bootstrap.min.css" />
+</head>
+<body>
+	<div class="container">
+		<div th:if="${user.isClub}">
+			<div th:replace="fragments/header :: header-club"></div>
+		</div>
+		<div th:if="${user.isCoach}">
+			<div th:replace="fragments/header :: header-coach"></div>
+		</div>
+		<div th:if="${user.isAdmin}">
+			<div th:replace="fragments/header :: header-admin"></div>
+		</div>
+		<div th:replace="fragments/footer :: footer"></div>
+	</div>
+</body>
+</html>

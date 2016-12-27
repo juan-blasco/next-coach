@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title th:text="${title}">Title</title>
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"
+	href="../../css/bootstrap.min.css" />
+</head>
+<body>
+	<div th:replace="fragments/header :: header"></div>
+	<div class="container">
+		<div class="col-sm-4 col-sm-offset-4">
+			<form name="form" th:action="@{/login}" action="/login" method="POST">
+				<div class="form-group">
+					<a th:href="@{/edit-club-profile}"
+						class="btn btn-default btn-lg active" role="button">Club</a> <a
+						th:href="@{/edit-coach-profile}"
+						class="btn btn-default btn-lg active" role="button">Entrenador</a>
+				</div>
+			</form>
+		</div>
+		<div th:replace="fragments/footer :: footer"></div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title th:text="${title}">Title</title>
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"
+	href="../../css/bootstrap.min.css" />
+</head>
+<body>
+	<div th:replace="fragments/header :: header"></div>
+	<div class="container">
+		<div class="col-sm-4 col-sm-offset-4">
+			<form action="#" th:action="@{/registration}" th:object="${user}"
+				method="post">
+				<h3 class="form-signin-heading">Completa tus datos:</h3>
+				<br />
+				<div class="form-group form-group-lg">
+					<input class="form-control" type="text" th:field="*{username}"
+						placeholder="Usuario" />
+				</div>
+				<div class="form-group form-group-lg">
+					<input class="form-control" type="password" th:field="*{pass}"
+						placeholder="Contrasena" />
+				</div>
+				<div class="form-group form-group-lg">
+					<input class="form-control" type="email" th:field="*{email}"
+						placeholder="Email" />
+				</div>
+				<div class="form-group form-group-lg">
+					<input class="form-control" type="date" th:field="*{dob}"
+						placeholder="Fecha de Nacimiento" />
+				</div>
+				<div class="form-group">
+					<label><input type="checkbox"
+						th:field="*{receiveNotifications}" /> Deseo recibir
+						notificaciones</label>
+				</div>
+				<input class="btn btn-primary btn-lg btn-block" type="submit"
+					value="Continuar" />
+			</form>
+		</div>
+		<div th:replace="fragments/footer :: footer"></div>
+	</div>
+</body>
+</html>
